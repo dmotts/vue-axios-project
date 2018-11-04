@@ -7,6 +7,8 @@ import router from './router'
 import store from './store'
 
 axios.defaults.baseURL = serverUrl
+axios.defaults.headers.common['Authorization'] = 'g4tgds'
+axios.defaults.headers.get['Accepts'] = 'application/json'
 
 new Vue({
   el: '#app',
