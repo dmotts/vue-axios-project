@@ -70,7 +70,7 @@
 
 <script>
   import axios from 'axios';
-  import serverUrl from '../../../server-url';
+  import serverUrl from '../../../../server-url';
   export default {
     data () {
       return {

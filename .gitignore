@@ -1,3 +1,5 @@
+server-url.js
+
 .DS_Store
 client/node_modules/
 client/dist/
@@ -10,6 +12,7 @@ server/dist/
 server/npm-debug.log
 server/yarn-error.log
 server/database_config.js
+server/server-url.js
 
 # Editor directories and files
 .idea

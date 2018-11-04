@@ -1,1 +1,0 @@
-module.exports = "https://budget-app-blakknot.c9users.io";
