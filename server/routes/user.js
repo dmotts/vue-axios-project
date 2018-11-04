@@ -3,7 +3,20 @@ var User = require("../models/User");
 var router = express.Router();
 
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  User.find({}, function(err, users) {
+    if (err) {
+      console.log(err);
+      res.status(401).json({
+        success: false,
+        message: err
+      });
+    } else {
+      res.status(200).json({
+        success: true,
+        users: users
+      });
+    }
+  })
 });
 
 router.post('/', function(req, res, next) {
