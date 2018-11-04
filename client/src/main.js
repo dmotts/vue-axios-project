@@ -10,6 +10,16 @@ axios.defaults.baseURL = serverUrl
 axios.defaults.headers.common['Authorization'] = 'g4tgds'
 axios.defaults.headers.get['Accepts'] = 'application/json'
 
+axios.interceptors.request.use(config => {
+  console.log('Request Interceptor', config)
+  return config
+})
+
+axios.interceptors.response.use(res => {
+  console.log('Response Interceptor', res)
+  return res
+})
+
 new Vue({
   el: '#app',
   router,
