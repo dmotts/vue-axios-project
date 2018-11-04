@@ -69,6 +69,8 @@
 </template>
 
 <script>
+  import axios from 'axios';
+  import serverUrl from '../../../server-url';
   export default {
     data () {
       return {
@@ -103,6 +105,9 @@
           terms: this.terms
         }
         console.log(formData)
+        axios.post(`${serverUrl}/users`, formData)
+          .then(res => console.log(res))
+          .catch(error => console.log(error))
       }
     }
   }
