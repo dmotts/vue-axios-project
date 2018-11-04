@@ -1,8 +1,15 @@
 .DS_Store
-node_modules/
-dist/
-npm-debug.log
-yarn-error.log
+client/node_modules/
+client/dist/
+client/npm-debug.log
+client/yarn-error.log
+
+
+server/node_modules/
+server/dist/
+server/npm-debug.log
+server/yarn-error.log
+
 
 # Editor directories and files
 .idea
