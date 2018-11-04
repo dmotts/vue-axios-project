@@ -16,7 +16,7 @@
       }
     },
     created() {
-      axios.get(`${serverUrl}/users`)
+      axios.get(`/users`)
         .then(res => {
           console.log(res);
           const data = res.data.users

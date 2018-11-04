@@ -105,7 +105,7 @@
           terms: this.terms
         }
         console.log(formData)
-        axios.post(`${serverUrl}/users`, formData)
+        axios.post(`/users`, formData)
           .then(res => console.log(res))
           .catch(error => console.log(error))
       }
