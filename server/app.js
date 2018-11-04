@@ -8,8 +8,22 @@ var routes = require('./routes');
 var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
+var mongoose = require('mongoose');
+var mongoDB = require('./database_config');
 
 var app = express();
+
+// Set up mongoose connection
+mongoose.connect(mongoDB, { useNewUrlParser: true });
+
+// Get Mongoose to use the global promise library
+mongoose.Promise = global.Promise;
+
+// Get the default connection
+var db = mongoose.connection;
+
+// Bind connection to error event
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 // all environments
 app.set('port', process.env.PORT || 3000);

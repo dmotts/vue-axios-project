@@ -9,7 +9,7 @@ server/node_modules/
 server/dist/
 server/npm-debug.log
 server/yarn-error.log
-
+server/database_config.js
 
 # Editor directories and files
 .idea
